@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+mapzenkey.txt
 # C extensions
 *.so
 

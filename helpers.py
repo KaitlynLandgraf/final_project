@@ -1,6 +1,6 @@
 from operator import itemgetter
 import csv
-FACILITIES_FNAME = './static/data/AdultResidentialFacilities06052016.csv'
+FACILITIES_FNAME = './static/data/geocoded_facilities.csv'
 
 def get_facilities():
     # open data file, filter for in_office,
@@ -22,7 +22,7 @@ def filter_by_city(city, datarows):
 def filter_by_county(county, datarows):
     matches = []
     for c in datarows:
-        if county.upper() == c['County Name']: 
+        if county.upper() == c['County Name']:
                 matches.append(c)
     return matches
 
