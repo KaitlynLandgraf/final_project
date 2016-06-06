@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search for a Congressmember</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+
+</head>
+<body>
+
+
+  <h3>How many residential care facilities are left in your community?</h3>
+  {% include 'searchbox.html' %}
+
+  <p>Data comes from <a href="https://secure.dss.ca.gov/CareFacilitySearch/Home/DownloadData">the California Department of Social Services</a></p>
+</body>
+</html>

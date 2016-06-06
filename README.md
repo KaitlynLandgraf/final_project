@@ -28,7 +28,7 @@ A look at the big picture would be helpful: what is the number of board and care
 
 1. The California Department of Social Services maintains a downloadable .csv file of all adult residential care facilities in the state: [https://secure.dss.ca.gov/CareFacilitySearch/home/getstatedata/HomeCare](https://secure.dss.ca.gov/CareFacilitySearch/home/getstatedata/HomeCare)
 2. HUD maintains point-in-time counts of homeless individuals in counties. Would be very easy to make a quick spreadsheet with county names and the number of homeless individuals in each county: [https://www.hudexchange.info/manage-a-program/coc-homeless-populations-and-subpopulations-reports/?filter_Year=2015&filter_Scope=CoC&filter_State=CA&filter_CoC=&program=CoC&group=PopSub](https://www.hudexchange.info/manage-a-program/coc-homeless-populations-and-subpopulations-reports/?filter_Year=2015&filter_Scope=CoC&filter_State=CA&filter_CoC=&program=CoC&group=PopSub)
-2. California county shapefiles from Arcgis. [http://www.arcgis.com/home/item.html?id=2f227372477d4cddadc0cd0b002ec657](http://www.arcgis.com/home/item.html?id=2f227372477d4cddadc0cd0b002ec657)
+3. California county shapefiles from Arcgis. [http://www.arcgis.com/home/item.html?id=2f227372477d4cddadc0cd0b002ec657](http://www.arcgis.com/home/item.html?id=2f227372477d4cddadc0cd0b002ec657)
 
 
 ## Categorical variable
