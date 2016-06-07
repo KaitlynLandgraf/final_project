@@ -33,8 +33,23 @@ def results():
         search_val = request.args.get('county')
         peeps = just_do_it(county=search_val, sortby=_sortby)
 
+    if len(peeps)==0:
+        avg_lat=[34.055] 
+        avg_lon=[-118.35];
+
+    xlat = 0
+    for p in peeps:
+            xlat += float(p['latitude'])
+            avg_lat = xlat / len(peeps)
+
+    xlon = 0
+    for p in peeps:
+            xlon += float(p['longitude'])
+            avg_lon = xlon / len(peeps)
+
     html = render_template('results.html', facilities=peeps, sortby=_sortby,
-                            search_type=search_type, search_value=search_val)
+                            search_type=search_type, search_value=search_val,
+                            center_lat=avg_lat, center_lng=avg_lon)
     return html
 
 if __name__ == '__main__':

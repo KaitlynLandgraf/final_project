@@ -3,12 +3,10 @@ import csv
 FACILITIES_FNAME = './static/data/geocoded_facilities.csv'
 
 def get_facilities():
-    # open data file, filter for in_office,
-    # add fullname field
-    # then return list of dicts
     with open(FACILITIES_FNAME, 'r') as f:
         newrows = []
         for row in csv.DictReader(f):
+            if row['latitude'] and row['longitude']:
                 newrows.append(row)
         return newrows
 
