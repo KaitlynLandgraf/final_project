@@ -10,7 +10,7 @@
 
      <p>Go back to <a href="{{url_for('homepage')}}">homepage</a></p>
 
-     <p> These are the residential care facilities that represent the {{search_type}} of {{search_value}}
+     <p> There are {{facilities|length}} {{sortby}} residential care facilities in the {{search_type}} of {{search_value}}
 
      </p>
 
@@ -18,8 +18,9 @@
     <table class="table table-bordered table-striped">
         <tr>
             <thead>
-                <th>NAme</th>
-                <th>City</th>
+                <th>Name</th>
+                <th>Facility Type</th>
+                <th>Status</th>
                 <th>Capacity</th>
                 <th>Complaint visits</th>
             </thead>
@@ -27,10 +28,10 @@
         {% for p in facilities %}
             <tr>
                 <td>{{p["Facility Name"] }}</td>
-                <td>{{p["Facility City"] }}</td>
-
+                <td>{{p["Facility Type"] }}</td>
+                <td>{{p["Facility Status"] }}</td>
                 <td>{{p["Facility Capacity"]}}</td>
-                <td>{{p["Complaint visits"]}}</td>
+                <td>{{p["Complaint Visits"]}}</td>
             </tr>
         {% endfor %}
     </table>
@@ -38,7 +39,7 @@
         <script type="text/javascript">
             var map = L.map('map').setView([34.055, -118.35], 9);
             var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
-                maxZoom: 18,
+                maxZoom: 0,
                 attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
                 subdomains: ['otile1','otile2','otile3','otile4']
             });

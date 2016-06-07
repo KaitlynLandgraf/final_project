@@ -10,11 +10,6 @@ with open(SOURCE_FILENAME, 'r') as f:
     for row in csv.DictReader(f):
             facilities.append(row)
 
-
-# delete this line later
-facilities = facilities[0:200]
-
-
 xcount = 0
 # now we geocode
 for f in facilities:

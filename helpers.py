@@ -32,13 +32,13 @@ def sort_by_status(status, datarows):
         for c in datarows:
             if c['Facility Status'] == 'LICENSED':
                 matches.append(c)
-    elif criteria == 'closed':
+    elif status == 'closed':
         for c in datarows:
-            if c['title'] == 'CLOSED':
+            if c['Facility Status'] == 'CLOSED':
                 matches.append(c)
-    elif criteria == 'pending':
+    elif status == 'pending':
         for c in datarows:
-            if c['title'] == 'Pending':
+            if c['Facility Status'] == 'PENDING':
                 matches.append(c)
     else:
         # i.e. 'alpha' or any value...just sort by last name, first name

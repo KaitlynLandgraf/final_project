@@ -27,10 +27,11 @@ def results():
         search_type = 'city'
         search_val = request.args.get('city')
         peeps = just_do_it(city=search_val, sortby=_sortby)
-    # elif request.args.get('county'):
-    #     search_type = 'county'
-    #     search_val = request.args.get('county')
-    #     peeps = just_do_it(county=search_val, sortby=_sortby)
+
+    elif request.args.get('county'):
+        search_type = 'county'
+        search_val = request.args.get('county')
+        peeps = just_do_it(county=search_val, sortby=_sortby)
 
     html = render_template('results.html', facilities=peeps, sortby=_sortby,
                             search_type=search_type, search_value=search_val)
